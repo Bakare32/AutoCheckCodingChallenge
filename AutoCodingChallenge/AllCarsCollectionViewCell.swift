@@ -9,15 +9,15 @@ import UIKit
 import SVGKit
 
 class AllCarsCollectionViewCell: UICollectionViewCell {
-    static let identifier = "ExploreCollectionViewCell"
+    static let identifier = "AllCarsCollectionViewCell"
     
-//    var cards: [ExploreCards] = []
-    
+
     let productImageView: UIImageView = {
       let imageView = UIImageView()
       imageView.contentMode = .scaleAspectFit
       imageView.clipsToBounds = true
       imageView.layer.cornerRadius = 20
+//        imageView.backgroundColor = .red
       imageView.translatesAutoresizingMaskIntoConstraints = false
       return imageView
     }()
@@ -39,7 +39,7 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
     }()
     let productRateLabel: UILabel = {
       let textView = UILabel()
-      textView.text = "(5.0)"
+      textView.text = "5.0"
       textView.font = UIFont(name: "NunitoSans-Regular", size: 14)
       textView.translatesAutoresizingMaskIntoConstraints = false
       return textView
@@ -54,15 +54,15 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
     }()
     let productPriceTextView: UILabel = {
       let textView = UILabel()
-      textView.text = "$111.67"
+      textView.text = "#10.67"
       textView.font = UIFont.boldSystemFont(ofSize: 14)
       textView.font = UIFont(name: "NunitoSans-Semibold", size: 14)
       textView.translatesAutoresizingMaskIntoConstraints = false
       return textView
     }()
-    let productImageV: UIImageView = {
+    let productImage: UIImageView = {
       let view = UIImageView()
-      view.backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.97, alpha: 1.00)
+//        view.backgroundColor = .red
       view.contentMode = .scaleAspectFit
       view.layer.cornerRadius = 15
       view.isUserInteractionEnabled = true
@@ -79,7 +79,7 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
     }()
     lazy var addButton: UIButton = {
       let button = UIButton()
-      button.layer.cornerRadius = 17
+      button.layer.cornerRadius = 25
       button.backgroundColor = .black
       button.setTitleColor(.yellow, for: .normal)
       button.setTitle("+", for: .normal)
@@ -97,19 +97,19 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
       productDetailsView.addSubview(productPriceTextView)
       productDetailsView.addSubview(productRateView)
       productDetailsView.addSubview(productRateLabel)
-      addSubview(productImageV)
+      addSubview(productImage)
       addSubview(productDetailsView)
       addSubview(addButton)
       addSubview(productImageView)
-      productDetailsView.addSubview(productImageV)
+      productDetailsView.addSubview(productImage)
       
       productImageView.anchorWithConstantsToTop(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
       
       productDetailsView.anchorWithConstantsToTop(top: topAnchor, left: leftAnchor, bottom:bottomAnchor, right: rightAnchor, topConstant: 80, leftConstant: 20, bottomConstant: 0, rightConstant: 20)
       
-      productImageV.anchorWithConstantsToTop(top: topAnchor, left:  leftAnchor, bottom: productDetailsView.bottomAnchor, right: rightAnchor, topConstant: 5, leftConstant: 35, bottomConstant: 100, rightConstant: 35)
+      productImage.anchorWithConstantsToTop(top: topAnchor, left:  leftAnchor, bottom: productDetailsView.bottomAnchor, right: rightAnchor, topConstant: 35, leftConstant: 35, bottomConstant: 120, rightConstant: 35)
       
-      productNametextView.anchorWithConstantsToTop(top: productImageV.bottomAnchor, left: leftAnchor,
+      productNametextView.anchorWithConstantsToTop(top: productImage.bottomAnchor, left: leftAnchor,
                                                    bottom: bottomAnchor,right: rightAnchor,topConstant: 0,leftConstant: 50,
                                                    bottomConstant: 60, rightConstant: 0)
       productBrandTextView.anchorWithConstantsToTop(top: productNametextView.bottomAnchor, left: leftAnchor,
@@ -124,14 +124,14 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
       productRateView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.05).isActive = true
       productRateView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.05).isActive = true
       addButton.anchorWithConstantsToTop(top: productRateView.bottomAnchor, left: leftAnchor,
-                                         bottom: bottomAnchor,right: rightAnchor,topConstant: 0,leftConstant: 330,
-                                         bottomConstant: 20, rightConstant: 0)
-      addButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
-      addButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1).isActive = true
+                                         bottom: bottomAnchor,right: rightAnchor,topConstant: 0,leftConstant: 280,
+                                         bottomConstant: 10, rightConstant: 0)
+      addButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.10).isActive = true
+      addButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.18).isActive = true
       
       NSLayoutConstraint.activate([
-        productRateLabel.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: -12),
-        productRateLabel.trailingAnchor.constraint(equalTo: productDetailsView.trailingAnchor, constant: -30)
+        productRateLabel.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: -3),
+        productRateLabel.trailingAnchor.constraint(equalTo: productDetailsView.trailingAnchor, constant: -5)
       ])
     }
     required init?(coder: NSCoder) {
@@ -148,7 +148,7 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
         }
         DispatchQueue.main.async {
           let image = UIImage(data: data)
-          self?.productImageV.image = image
+          self?.productImage.image = image
           
         }
       }.resume()

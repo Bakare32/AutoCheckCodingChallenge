@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
             switch result {
                 
             case .success(let data):
-//                print("The data is lets go \(data)")
+                print("The data is lets go \(data)")
                 self?.allCars = data
                 self?.carsCollectionView.reloadData()
             case .failure(let error):

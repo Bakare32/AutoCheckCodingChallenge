@@ -25,6 +25,7 @@
 		04409B20275AF70E00F3B0E7 /* HomeViewController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */; };
 		04409B22275AF8BA00F3B0E7 /* AllCarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */; };
 		04409B24275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */; };
+		0475082C275C22B600927241 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475082B275C22B600927241 /* DetailProductViewController.swift */; };
 		729FFDC5FB8C95FEA32EE295 /* Pods_AutoCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80D69444F07B7914EE8A2F /* Pods_AutoCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + extension.swift"; sourceTree = "<group>"; };
 		04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCarsModel.swift; sourceTree = "<group>"; };
 		04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCarsCollectionViewCell.swift; sourceTree = "<group>"; };
+		0475082B275C22B600927241 /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		13C50A28E3AEA28E90A67FC0 /* Pods-AutoCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-AutoCodingChallenge/Pods-AutoCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		26B99F99B9829F73B8974F5D /* Pods-AutoCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-AutoCodingChallenge/Pods-AutoCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		5E80D69444F07B7914EE8A2F /* Pods_AutoCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 				04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */,
 				04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */,
 				04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */,
+				0475082B275C22B600927241 /* DetailProductViewController.swift */,
 			);
 			path = AutoCodingChallenge;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				04409AFA275A8B7000F3B0E7 /* AppDelegate.swift in Sources */,
 				04409B14275AC8BF00F3B0E7 /* Method.swift in Sources */,
 				04409B20275AF70E00F3B0E7 /* HomeViewController + extension.swift in Sources */,
+				0475082C275C22B600927241 /* DetailProductViewController.swift in Sources */,
 				04409B1E275AEFCF00F3B0E7 /* ViewModel.swift in Sources */,
 				04409AFC275A8B7000F3B0E7 /* SceneDelegate.swift in Sources */,
 			);
