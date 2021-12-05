@@ -13,7 +13,7 @@ struct NetworkService {
     static let shared = NetworkService()
     private init() {}
     
-    func getAllCars(completion: @escaping(Result<AllCars, Error>) -> Void) {
+    func getAllCars(completion: @escaping(Result<Welcome, Error>) -> Void) {
         request(route: .allCars, method: .get, completion: completion)
     }
     
@@ -79,9 +79,7 @@ struct NetworkService {
         let urlString = Route.baseUrl + route.description
         guard let url = urlString.asUrl else { return nil }
         var urlRequest = URLRequest(url: url)
-//        urlRequest.addValue("995a0304f4a7489396a6f103d5654d8a", forHTTPHeaderField:"X-Auth-Token")
-//        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        urlRequest.setValue("application/json", forHTTPHeaderField: HeaderConstant.accept)
+
         
         
         

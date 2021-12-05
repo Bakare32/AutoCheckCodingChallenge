@@ -19,7 +19,10 @@ class HomeViewController: UIViewController {
    let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
 
     var popularCars: Popular?
-    var allCars: AllCars?
+    var allCars: Welcome?
+    
+    var useId: String?
+    var results: [Scores] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +39,6 @@ class HomeViewController: UIViewController {
             case .success(let data):
                 
                 self?.popularCars = data
-//                print("The data is \(self?.popularCars)")
                 self?.homeCollectionView.reloadData()
             case .failure(let error):
                 print("\(error.localizedDescription)")
@@ -47,7 +49,6 @@ class HomeViewController: UIViewController {
             switch result {
                 
             case .success(let data):
-                print("The data is lets go \(data)")
                 self?.allCars = data
                 self?.carsCollectionView.reloadData()
             case .failure(let error):

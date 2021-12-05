@@ -17,7 +17,6 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
       imageView.contentMode = .scaleAspectFit
       imageView.clipsToBounds = true
       imageView.layer.cornerRadius = 20
-//        imageView.backgroundColor = .red
       imageView.translatesAutoresizingMaskIntoConstraints = false
       return imageView
     }()
@@ -62,7 +61,6 @@ class AllCarsCollectionViewCell: UICollectionViewCell {
     }()
     let productImage: UIImageView = {
       let view = UIImageView()
-//        view.backgroundColor = .red
       view.contentMode = .scaleAspectFit
       view.layer.cornerRadius = 15
       view.isUserInteractionEnabled = true

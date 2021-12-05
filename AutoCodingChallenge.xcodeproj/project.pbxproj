@@ -20,12 +20,11 @@
 		04409B16275AC8D600F3B0E7 /* String + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B15275AC8D600F3B0E7 /* String + extension.swift */; };
 		04409B18275AC8EB00F3B0E7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B17275AC8EB00F3B0E7 /* AppError.swift */; };
 		04409B1A275ACA6300F3B0E7 /* PopularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B19275ACA6300F3B0E7 /* PopularModel.swift */; };
-		04409B1C275AEE5100F3B0E7 /* PopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B1B275AEE4F00F3B0E7 /* PopularViewModel.swift */; };
-		04409B1E275AEFCF00F3B0E7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B1D275AEFCF00F3B0E7 /* ViewModel.swift */; };
 		04409B20275AF70E00F3B0E7 /* HomeViewController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */; };
 		04409B22275AF8BA00F3B0E7 /* AllCarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */; };
 		04409B24275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */; };
 		0475082C275C22B600927241 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475082B275C22B600927241 /* DetailProductViewController.swift */; };
+		04750830275D5DC500927241 /* AnotherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475082F275D5DC500927241 /* AnotherDetails.swift */; };
 		729FFDC5FB8C95FEA32EE295 /* Pods_AutoCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80D69444F07B7914EE8A2F /* Pods_AutoCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,12 +44,11 @@
 		04409B15275AC8D600F3B0E7 /* String + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extension.swift"; sourceTree = "<group>"; };
 		04409B17275AC8EB00F3B0E7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		04409B19275ACA6300F3B0E7 /* PopularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularModel.swift; sourceTree = "<group>"; };
-		04409B1B275AEE4F00F3B0E7 /* PopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewModel.swift; sourceTree = "<group>"; };
-		04409B1D275AEFCF00F3B0E7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + extension.swift"; sourceTree = "<group>"; };
 		04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCarsModel.swift; sourceTree = "<group>"; };
 		04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCarsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0475082B275C22B600927241 /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
+		0475082F275D5DC500927241 /* AnotherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherDetails.swift; sourceTree = "<group>"; };
 		13C50A28E3AEA28E90A67FC0 /* Pods-AutoCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-AutoCodingChallenge/Pods-AutoCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		26B99F99B9829F73B8974F5D /* Pods-AutoCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-AutoCodingChallenge/Pods-AutoCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		5E80D69444F07B7914EE8A2F /* Pods_AutoCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,28 +87,67 @@
 		04409AF8275A8B7000F3B0E7 /* AutoCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				04750835275D880C00927241 /* Utilities */,
+				04750833275D879300927241 /* Controller */,
+				04750832275D878B00927241 /* Views */,
+				04750831275D878300927241 /* Model */,
 				04409AF9275A8B7000F3B0E7 /* AppDelegate.swift */,
-				04409B11275AC8B100F3B0E7 /* Route.swift */,
 				04409AFB275A8B7000F3B0E7 /* SceneDelegate.swift */,
-				04409AFD275A8B7000F3B0E7 /* HomeViewController.swift */,
-				04409AFF275A8B7000F3B0E7 /* Main.storyboard */,
 				04409B02275A8B7400F3B0E7 /* Assets.xcassets */,
 				04409B04275A8B7400F3B0E7 /* LaunchScreen.storyboard */,
 				04409B07275A8B7400F3B0E7 /* Info.plist */,
-				04409B0D275AC1B900F3B0E7 /* ExploreCollectionViewCell.swift */,
-				04409B0F275AC8A200F3B0E7 /* NetworkService.swift */,
-				04409B13275AC8BF00F3B0E7 /* Method.swift */,
-				04409B15275AC8D600F3B0E7 /* String + extension.swift */,
-				04409B17275AC8EB00F3B0E7 /* AppError.swift */,
-				04409B19275ACA6300F3B0E7 /* PopularModel.swift */,
-				04409B1B275AEE4F00F3B0E7 /* PopularViewModel.swift */,
-				04409B1D275AEFCF00F3B0E7 /* ViewModel.swift */,
-				04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */,
-				04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */,
-				04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */,
-				0475082B275C22B600927241 /* DetailProductViewController.swift */,
 			);
 			path = AutoCodingChallenge;
+			sourceTree = "<group>";
+		};
+		04750831275D878300927241 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04409B21275AF8BA00F3B0E7 /* AllCarsModel.swift */,
+				0475082F275D5DC500927241 /* AnotherDetails.swift */,
+				04409B19275ACA6300F3B0E7 /* PopularModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04750832275D878B00927241 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04409AFF275A8B7000F3B0E7 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04750833275D879300927241 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04750834275D87E600927241 /* Cell */,
+				04409B1F275AF70E00F3B0E7 /* HomeViewController + extension.swift */,
+				0475082B275C22B600927241 /* DetailProductViewController.swift */,
+				04409AFD275A8B7000F3B0E7 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04750834275D87E600927241 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04409B23275AFCE000F3B0E7 /* AllCarsCollectionViewCell.swift */,
+				04409B0D275AC1B900F3B0E7 /* ExploreCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04750835275D880C00927241 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04409B0F275AC8A200F3B0E7 /* NetworkService.swift */,
+				04409B15275AC8D600F3B0E7 /* String + extension.swift */,
+				04409B13275AC8BF00F3B0E7 /* Method.swift */,
+				04409B17275AC8EB00F3B0E7 /* AppError.swift */,
+				04409B11275AC8B100F3B0E7 /* Route.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		1FCD685C85BF03D22C8BBDB9 /* Frameworks */ = {
@@ -248,8 +285,8 @@
 				04409B10275AC8A200F3B0E7 /* NetworkService.swift in Sources */,
 				04409B0E275AC1B900F3B0E7 /* ExploreCollectionViewCell.swift in Sources */,
 				04409B18275AC8EB00F3B0E7 /* AppError.swift in Sources */,
-				04409B1C275AEE5100F3B0E7 /* PopularViewModel.swift in Sources */,
 				04409B16275AC8D600F3B0E7 /* String + extension.swift in Sources */,
+				04750830275D5DC500927241 /* AnotherDetails.swift in Sources */,
 				04409AFE275A8B7000F3B0E7 /* HomeViewController.swift in Sources */,
 				04409B22275AF8BA00F3B0E7 /* AllCarsModel.swift in Sources */,
 				04409B1A275ACA6300F3B0E7 /* PopularModel.swift in Sources */,
@@ -259,7 +296,6 @@
 				04409B14275AC8BF00F3B0E7 /* Method.swift in Sources */,
 				04409B20275AF70E00F3B0E7 /* HomeViewController + extension.swift in Sources */,
 				0475082C275C22B600927241 /* DetailProductViewController.swift in Sources */,
-				04409B1E275AEFCF00F3B0E7 /* ViewModel.swift in Sources */,
 				04409AFC275A8B7000F3B0E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

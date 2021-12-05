@@ -16,19 +16,6 @@ class ExploreCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var brandName: UILabel!
     
-
-//    override init(frame: CGRect) {
-//      super.init(frame: frame)
-//
-//    }
-//
-//    required init?(coder: NSCoder) {
-//      fatalError("init(coder:) has not been implemented")
-//    }
-    
-//    func setUp(with model: Popular) {
-//        let image = try? model.makeList[].imageURL
-//    }
     
     func configure(with urlString: String){
       guard let url = URL(string: urlString) else {

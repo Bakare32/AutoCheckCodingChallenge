@@ -14,7 +14,7 @@ class DetailProductViewController: UIViewController {
     lazy var titlePageLabel: UILabel = {
       let label = UILabel()
       label.translatesAutoresizingMaskIntoConstraints = false
-      label.text = "Product"
+      label.text = "Car Details"
       label.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
       label.numberOfLines = 1
       return label
@@ -147,12 +147,9 @@ class DetailProductViewController: UIViewController {
       return button
     }()
     
-    var productName = ""
-    var productBrand = ""
-    var productPrice = ""
+
     var productImage = UIImage()
-    var totalAmount = ""
-    var setButtonAmount = ""
+    var usedId = ""
     
     func configure(with urlString: String){
       guard let url = URL(string: urlString) else {
@@ -172,14 +169,9 @@ class DetailProductViewController: UIViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
-      productNameLabel.text = productName
-      productNametextView.text = productName
-      productBrandTextView.text = productBrand
-      productPriceTextView.text = productPrice
-        totalPriceTextView.text = totalAmount
-        purchaseButton.setTitle(setButtonAmount, for: .normal)
       navigationController?.navigationBar.isHidden = true
       setupConstraints()
+        setUpData()
     }
     
     // MARK: - SETUP VIEWS FUNCTION
@@ -199,6 +191,41 @@ class DetailProductViewController: UIViewController {
       productDetailsView.addSubview(productPriceTextView)
       productDetailsView.addSubview(productBrandTextView)
       productDetailsView.addSubview(purchaseButton)
+    }
+    
+
+    
+    func setUpData() {
+        let query: String? = UserDefaults.standard.string(forKey: "Myid")
+        let urlString = "https://api-prod.autochek.africa/v1/inventory/car/\(query ?? "")"
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { [ weak self ] data, response, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let jsonResult = try JSONDecoder().decode(AnotherDetails.self, from: data)
+                
+                DispatchQueue.main.async {
+                    self?.productNameLabel.text = jsonResult.model.name
+                    self?.productNametextView.text = "Year: \(jsonResult.year)"
+                    if jsonResult.model.popular == true {
+                        self?.productPriceTextView.text = "It is very popular"
+                       
+                    } else {
+                        self?.productPriceTextView.text = "Not popular"
+                        self?.productRateView.isHidden = true
+                    }
+                    self?.productRateLabel.text = "\(jsonResult.marketplaceVisible)"
+                    self?.productBrandTextView.text = jsonResult.vin
+                    self?.purchaseButton.setTitle(jsonResult.model.wheelType, for: .normal)
+                    self?.totalPriceTextView.text = "Inspector: \(jsonResult.inspectorDetails.inspectorFullName)"
+                }
+            }
+            catch {
+                print(error)
+            }
+        }.resume()
     }
     
     @objc func didTapTopBackArrowButton() {
