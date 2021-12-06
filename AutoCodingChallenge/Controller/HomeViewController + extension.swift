@@ -13,7 +13,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if collectionView == homeCollectionView {
             return popularCars?.makeList.count ?? 20
         } else {
-            return allCars?.result.count ?? 25
+            return allCars?.result.count ?? 100
         }
         
     }
@@ -35,6 +35,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             let model = allCars?.result[indexPath.row]
             guard let cell = carsCollectionView.dequeueReusableCell(withReuseIdentifier: AllCarsCollectionViewCell.identifier, for: indexPath) as? AllCarsCollectionViewCell else { return UICollectionViewCell() }
             cell.configure(with: model?.imageURL ?? "")
+            print("The gradescre is \(self.allCars?.result[indexPath.item].gradeScore ?? 5)")
+            
+            cell.productRateLabel.text = String(NSString(format: "%.1f", self.allCars?.result[indexPath.item].gradeScore ?? 5))
             cell.productNametextView.text =   self.allCars?.result[indexPath.item].title
             cell.productBrandTextView.text =  self.allCars?.result[indexPath.item].city
             cell.productPriceTextView.text = "\(String(describing: self.allCars?.result[indexPath.item].marketplacePrice ?? 4)) Naira"
