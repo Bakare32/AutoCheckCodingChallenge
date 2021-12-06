@@ -29,9 +29,11 @@ class HomeViewController: UIViewController {
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
         
+        homeCollectionView.showsHorizontalScrollIndicator = false
+        
         carsCollectionView.delegate = self
         carsCollectionView.dataSource = self
-        
+        carsCollectionView.showsVerticalScrollIndicator = false
         carsCollectionView.register(AllCarsCollectionViewCell.self, forCellWithReuseIdentifier: AllCarsCollectionViewCell.identifier)
         
         NetworkService.shared.getPopularCars { [ weak self ] result in

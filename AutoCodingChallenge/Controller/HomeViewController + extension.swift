@@ -11,7 +11,7 @@ import UIKit
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == homeCollectionView {
-            return popularCars?.makeList.count ?? 20
+            return popularCars?.makeList.count ?? 100
         } else {
             return allCars?.result.count ?? 100
         }
